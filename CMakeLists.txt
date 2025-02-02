@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.29)
 
 if (DEFINED ENV{USE_VCPKG_TOOLCHAIN} AND "$ENV{USE_VCPKG_TOOLCHAIN}" STREQUAL "1")
-    set(CMAKE_TOOLCHAIN_FILE "D:/vcpkg/scripts/buildsystems/vcpkg.cmake")
+    set(CMAKE_TOOLCHAIN_FILE "E:/vcpkg/scripts/buildsystems/vcpkg.cmake")
 endif()
 
 project(print_ip VERSION 1.0.0)
 
-option(WITH_GTEST "Whether to build Google test" OFF)
+option(WITH_GTEST "Whether to build Google test" OFF) #без тестов в этот раз, нет в условиях :)
 
 add_executable(main 
 main.cpp
